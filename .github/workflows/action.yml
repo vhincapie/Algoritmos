@@ -3,7 +3,7 @@ name: Compilar y Ejecutar Java
 on:
   push:
     branches:
-      - main  # Se ejecutará cuando hagas push a la rama main
+      - main  
 
 jobs:
   build:
