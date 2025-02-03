@@ -1,0 +1,26 @@
+name: Compilar y Ejecutar Java
+
+on:
+  push:
+    branches:
+      - main  # Se ejecutará cuando hagas push a la rama main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4  
+
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Compilar el código
+        run: javac -d out src/*.java 
+
+      - name: Ejecutar el código
+        run: java -cp out Euclides  
