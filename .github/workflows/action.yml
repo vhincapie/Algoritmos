@@ -20,6 +20,6 @@ jobs:
           distribution: 'temurin'
 
       - name: Compilar el código
-        run: javac -d out src/Euclides.java 
+        run: javac -d out Euclides.java 
       - name: Ejecutar el código
         run: java -cp out Euclides
