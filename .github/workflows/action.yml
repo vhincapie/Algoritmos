@@ -1,4 +1,4 @@
-name: Compilar Java
+name: Compilar Solo Euclides
 
 on:
   push:
@@ -19,6 +19,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Compilar el código
-        run: javac -d out $(find Complejidad/src -name "*.java")
+      - name: Compilar solo Euclides.java
+        run: javac -d out Complejidad/src/Euclides.java
+
 
