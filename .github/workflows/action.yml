@@ -1,4 +1,4 @@
-name: Compilar y Ejecutar Java
+name: Compilar Java
 
 on:
   push:
@@ -22,5 +22,3 @@ jobs:
       - name: Compilar el código
         run: javac -d out $(find Complejidad/src -name "*.java")
 
-      - name: Ejecutar el código
-        run: java -cp out Euclides  
