@@ -20,6 +20,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Compilar el código
-        run: javac -d out Complejidad/scr/Euclides.java 
+        run: javac -d out $(find Complejidad/src -name "*.java")
+
       - name: Ejecutar el código
-        run: java -cp out Euclides
+        run: java -cp out Euclides  
